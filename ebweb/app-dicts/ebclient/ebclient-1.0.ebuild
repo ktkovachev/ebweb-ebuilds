@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+static-libs"
 
-DEPEND="dev-libs/ebu dev-libs/mxml[static-libs] sys-libs/zlib[static-libs]"
+DEPEND="dev-libs/ebu[static-libs] dev-libs/mxml[static-libs] sys-libs/zlib[static-libs]"
 RDEPEND="${DEPEND}"
 BDEPEND="dev-build/libtool"
 
