@@ -17,11 +17,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="dev-build/libtool"
 
 src_configure() {
-	#econf --enable-static
 	autoconf
-	#econf \
-	#	$(use_enable static-libs)
-
 	./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc
 }
 
@@ -30,13 +26,5 @@ src_compile() {
 }
 
 src_install() {
-	#emake install
 	emake DESTDIR="${D}" install
-#	emake \
-#		prefix="${D}"/usr \
-#		mandir="${D}"/usr/share/man \
-#		infodir="${D}"/usr/share/info \
-#		libdir="${D}"/usr/$(get_libdir) \
-#		install
-
 }
